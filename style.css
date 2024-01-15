@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+/*define konstantas vertibas (kas vslk jaatkarto)*/
+:root{              
+    --maincolor: #f57266;
+}
+
+/*atlasisanas (select) krasa/editosana */
+*::selection{
+    background-color: var(--maincolor);
+    color: #fff;
+}
+
+/*scrollbar izskats*/
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #888;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--maincolor);
+    border-radius: 1rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f5f5f5;
+}
+
+header{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid #ddd;
+    padding: 2.5rem 7%;
+}
+
+header .logo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+header img{
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;     /*vertikali*/
+    justify-content: center; /*horizontali*/
+    list-style: none;
+}
+
+header nav ul li{
+    margin-right: 2.5rem;
+}
+
+header nav ul li a{
+    color: #333;
+    font-size: 1.3rem;
+}
+
+header nav ul li a:hover{
+    color: var(--maincolor);
+    border-bottom: .2rem solid var(--maincolor);
+    padding: 1rem 0;
+}
+
+#menu{
+    font-size: 2rem;
+    color: #555;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    min-height: 50vh; /*viewpoint height*/
+    padding: 8rem 7% 3rem;
+}
+
+#sakums .image, #prasmes .image{
+    flex: 1 1 20rem;
+}
+
+#sakums .image img, #prasmes .image img{
+    width: 100%;
+}
+
+#sakums .content, #prasmes .content{
+    flex: 1 1 30rem;
+    padding-left: 3rem;
+}
+
+#sakums .content span{
+    color: var(--maincolor);
+    font-size: 2rem;
+}
+
+#sakums .content h1{
+    color: #555;
+    font-size: 2.5rem;    
+}
+
+#sakums .content p{
+    color: #888;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    background-color: var(--maincolor);
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.btn:hover{
+    background-color: #333;
+}
+
+#pakalpojumi h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+span{
+    color: var(--maincolor);
+}
+/*Visiem vienads*/
+#pakalpojumi .box-container, #prasmes, #sakums{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#pakalpojumi .box-container .box{
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.1);
+    padding: 2rem;
+    margin: 1rem;
+    width: 24rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+#pakalpojumi .box-container .box:hover{
+    transform: translateY(-1rem);
+}
+
+#pakalpojumi .box-container .box img{
+    width: 7rem;
+    height: 7rem;
+}
+
+#pakalpojumi .box-container .box h3{
+    font-size: 1.4rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+#ieguvumi, #izstrade{
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#ieguvumi .image, #izstrade .image{
+    flex: 1 1 37rem;
+    height: 35rem;
+}
+
+#ieguvumi img, #izstrade img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#ieguvumi .content, #izstrade .content{
+    flex: 1 1 37rem;
+    padding: 2rem 0 2rem 6rem;
+}
+
+#ieguvumi h2, #izstrade h2{
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+#ieguvumi ul li, #izstrade ul li{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    color: #eee;
+    padding: .5rem 0;
+}
+
+#prasmes h2{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+#prasmes p{
+    font-size: 1.3rem;
+    color: #888;
+    padding: 1rem 0;
+}
+
+#prasmes ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+#prasmes ul .two{
+    padding-left: 4.5rem;
+}
+
+#prasmes ul li{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    color: #444;
+    padding: .5rem 0;
+}
+
+.footer{
+    display: flex;
+    background-color: #333;
+    color: #888;
+    justify-content: space-evenly;
+    padding: 3rem 5rem;
+    font-size: 1rem;
+}
+
+.footer h2{
+    color: #eee;
+    padding: 0 0 2rem 0;
+    text-align: left;
+}
+
+#parMums, #valoda, #saites, #kontakti{
+    width: 25%;
+}
+
+#parMums img{
+    height: 3.3rem;
+    float: left;
+    align-items: center;
+}
+
+#parMums .pirma{
+    padding: 0 0 1.5rem 4rem;
+}
+
+#parMums p{
+    text-align: justify;
+    margin: 0 5rem 0 0;
+}
+
+#valoda ul, #saites ul, #kontakti ul{
+    text-decoration: none;
+    list-style: none;
+    
+}
+#valoda ul li, #saites ul li{
+    padding: 0 0 1rem 0;
+    text-align: left;
+}
+
+#kontakti ul li{
+    padding: 0 0 2rem 0;
+    text-align: left;
+    display:block;
+    color:#f57266;
+}
+
+#valoda ul li a, #saites ul li a{
+    color: #888;
+}
+
+#kontakti ul li p{
+    display: inline;
+    color:#888;
+    padding: 2rem;
+}
+
+.icons{
+    display: flex;
+    font-size: 1.5rem;
+    padding: 0 4rem 0 0;
+    border-radius: 50% solid #888;
+   
+}
+
+.icons a{
+    text-decoration: none;
+    color: #eee;
+    padding: 0 1rem 0 0;
+    text-align:left;
+}
+
+hr{
+    color: #888;
+    width: 75%;
+    height: 1px;
+}
+
+footer{
+    width: 100%;
+    background-color: #333;
+    color: #eee;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/*lai der visiem ekranu izmeriem, adaptivs dizains*/
+@media(max-width: 1470px){
+    /*neattiecas uz fontu, bet uz merogu, kur pats adaptejas*/
+    html{
+        font-size: 80%;
+    }
+}
+
+@media(max-width: 900px){
+
+    #menu{
+        display: block;
+    }
+
+    nav{
+        position: fixed;
+        top: 7.5rem;
+        left: -120%; /*Lai paslepts arpus ekrana*/
+        height: 100vh;
+        width: 100%;
+        background: #eee;
+        border-top: .2rem solid rgba(0,0,0,.1); 
+    }
+
+    nav ul{
+        flex-flow: column;
+        padding: 2rem;
+    }
+
+    nav li{
+        text-align: center;
+        width: 100%;
+        margin: 1rem 2rem;
+    }
+
+    nav li a{
+        display: block;
+        padding: 1rem;
+        background: #ddd;
+        color: #333;
+        border-radius: 1rem;
+    }
+
+    li a:hover{
+        background: var(--maincolor);
+        color: #fff !important; /*Lai raditos balta krasa, prioritate*/
+        border: none;
+    }
+
+    .nav-toggle{
+        left: 0;
+    }
+}
+
+@media(max-width: 600px){
+    section{
+        min-height: 50vh;
+        padding: 8rem 1rem 3rem;
+    }
+
+    #prasmes img{
+        display: none;
+    }
+}
